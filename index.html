@@ -1,79 +1,599 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Shubham Sharma — PhD researcher in Efficient AI and Computer Vision at BITS Pilani." />
-  <title>Shubham Sharma · Research Portfolio</title>
+  <title>Shubham Sharma</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f7f9fc;--paper:#fff;--ink:#102033;--muted:#607088;--line:#dce4ef;
-      --blue:#2563eb;--indigo:#4f46e5;--cyan:#0891b2;--green:#0f766e;--amber:#b45309;
-      --shadow:0 20px 60px rgba(15,32,51,.10);--radius:26px;--radius2:18px;
+    :root {
+      --bg: #f5efe3;
+      --surface: #fffaf1;
+      --surface-soft: #eee2cc;
+      --surface-muted: #e5d5b8;
+      --ink: #2d2418;
+      --ink-soft: #5f513d;
+      --muted: #87765d;
+      --line: rgba(84, 65, 35, 0.18);
+      --line-strong: rgba(84, 65, 35, 0.32);
+      --accent: #8a6d3b;
+      --accent-dark: #5f4927;
+      --accent-light: #d9c59b;
+      --olive: #59603b;
+      --max: 1080px;
+      --radius: 18px;
+      --serif: 'Source Serif 4', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at top left,#e8f0ff,transparent 34rem),linear-gradient(180deg,#f8fbff 0%,#eef4fb 100%);color:var(--ink);line-height:1.65}
-    a{color:inherit;text-decoration:none}.mono{font-family:"JetBrains Mono",monospace}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.pill{display:inline-flex;gap:.45rem;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.72);backdrop-filter:blur(12px);padding:.45rem .75rem;border-radius:999px;color:var(--muted);font-size:.82rem;font-weight:600}.nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(220,228,239,.8);background:rgba(247,249,252,.78);backdrop-filter:blur(18px)}.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{font-weight:800;letter-spacing:-.04em}.brand span{color:var(--blue)}.links{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap}.links a{font-size:.9rem;color:var(--muted);font-weight:600;padding:.5rem .7rem;border-radius:999px}.links a:hover{background:#fff;color:var(--blue)}.hero{padding:76px 0 42px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:stretch}.hero-card,.side-card,.section-card{background:rgba(255,255,255,.82);border:1px solid rgba(220,228,239,.95);border-radius:var(--radius);box-shadow:var(--shadow)}.hero-card{padding:42px;position:relative;overflow:hidden}.hero-card:before{content:"";position:absolute;right:-7rem;top:-7rem;width:18rem;height:18rem;border-radius:50%;background:linear-gradient(135deg,rgba(37,99,235,.22),rgba(8,145,178,.12));}.eyebrow{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:22px}.h1{font-size:clamp(2.4rem,6vw,5.2rem);line-height:.96;letter-spacing:-.08em;margin:0 0 22px;font-weight:800;max-width:780px}.lead{font-size:1.12rem;color:#3a4a60;max-width:720px;margin:0 0 28px}.cta{display:flex;gap:.8rem;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.78rem 1rem;border-radius:14px;border:1px solid var(--line);font-weight:750;background:#fff;color:var(--ink)}.btn.primary{background:linear-gradient(135deg,var(--blue),var(--indigo));color:#fff;border-color:transparent}.side{display:grid;gap:16px}.side-card{padding:24px}.stat{font-size:2.25rem;line-height:1;font-weight:800;letter-spacing:-.06em}.stat-label{color:var(--muted);font-size:.88rem;margin-top:6px}.status{display:flex;align-items:center;gap:.55rem;color:var(--muted);font-size:.88rem}.dot{width:9px;height:9px;border-radius:99px;background:var(--amber)}.dot.ok{background:var(--green)}main{padding:18px 0 80px}.section{padding:22px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin:0 0 14px}.section-title{font-size:1.4rem;letter-spacing:-.04em;margin:0}.section-sub{margin:3px 0 0;color:var(--muted);font-size:.95rem}.section-card{padding:26px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.item{border:1px solid var(--line);border-radius:var(--radius2);padding:18px;background:#fff}.item h3{font-size:1rem;margin:0 0 5px;letter-spacing:-.02em}.meta{color:var(--muted);font-size:.9rem;margin-bottom:8px}.desc{color:#3a4a60;font-size:.94rem;white-space:pre-wrap}.tagrow{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:12px}.tag{font-size:.74rem;font-weight:750;color:#254160;background:#eef4ff;border:1px solid #dbe8ff;border-radius:999px;padding:.25rem .55rem}.tag.green{background:#ecfdf5;border-color:#d1fae5;color:#047857}.tag.amber{background:#fffbeb;border-color:#fde68a;color:#92400e}.pub-title{font-size:1.02rem;font-weight:800;letter-spacing:-.025em}.doi{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--blue);word-break:break-all}.skills{display:flex;gap:.55rem;flex-wrap:wrap}.skill{background:#f3f7fc;border:1px solid var(--line);border-radius:999px;padding:.5rem .75rem;color:#30435c;font-weight:650;font-size:.88rem}.timeline{display:grid;gap:12px}.contact-box{display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px}.footer{padding:35px 0;color:var(--muted);font-size:.85rem}.empty{color:var(--muted);font-size:.95rem;padding:10px 0}.notice{border:1px dashed #c7d2fe;background:#eef2ff;color:#3730a3;border-radius:18px;padding:12px 14px;font-size:.88rem;margin-top:14px}.hidden{display:none!important}@media(max-width:860px){.hero-grid,.grid-2,.grid-3,.contact-box{grid-template-columns:1fr}.links{display:none}.hero-card{padding:30px}.nav-inner{height:62px}}
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at 16% 0%, rgba(217, 197, 155, 0.45), transparent 30rem),
+        linear-gradient(180deg, #f8f2e6 0%, var(--bg) 42%, #f9f6ef 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent-dark); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(245, 239, 227, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      letter-spacing: -0.02em;
+      font-weight: 650;
+      font-size: 15px;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      align-items: center;
+    }
+
+    .navlinks a { border-bottom: 1px solid transparent; }
+    .navlinks a:hover { border-bottom-color: var(--accent); }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 58px 22px 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 56px;
+      align-items: center;
+      padding: 32px 0 56px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 241, 0.56);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--olive);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+      font-weight: 500;
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: clamp(16px, 1.6vw, 18px);
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 250, 241, 0.72);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 600;
+      transition: transform 0.16s ease, background 0.16s ease, border 0.16s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: var(--surface);
+      border-color: var(--accent);
+      color: var(--ink);
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: var(--surface);
+      border-color: var(--ink);
+    }
+
+    .button.primary:hover { background: var(--accent-dark); color: #fff; }
+
+    .portrait-card {
+      justify-self: end;
+      width: 240px;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 241, 0.72);
+      border-radius: 28px;
+      padding: 12px;
+      box-shadow: 0 22px 60px rgba(73, 52, 22, 0.10);
+    }
+
+    .portrait {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.14;
+      border-radius: 22px;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(217, 197, 155, 0.85), rgba(245, 239, 227, 0.9)),
+        radial-gradient(circle at 36% 26%, rgba(255,255,255,0.75), transparent 12rem);
+      border: 1px solid rgba(84, 65, 35, 0.14);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portrait-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 28px;
+      color: var(--accent-dark);
+    }
+
+    .portrait-fallback strong {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: -0.08em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .portrait-fallback span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .portrait-note {
+      margin: 12px 4px 2px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 46px 0 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 34px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 25px;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .section-intro {
+      margin: 0;
+      color: var(--muted);
+      max-width: 690px;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 241, 0.66);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .card h3,
+    .item-title {
+      margin: 0 0 5px;
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: -0.015em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .item:last-child { border-bottom: 0; }
+    .date { color: var(--muted); font-size: 13px; font-weight: 600; }
+    .item p { margin: 7px 0 0; color: var(--ink-soft); font-size: 14px; }
+
+    .pub {
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 241, 0.68);
+      border-radius: var(--radius);
+    }
+
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin: 0 0 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      background: rgba(238, 226, 204, 0.65);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+
+    .contact-panel {
+      margin-top: 46px;
+      padding: 28px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(255, 250, 241, 0.9), rgba(229, 213, 184, 0.42));
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-panel h2 { margin-bottom: 8px; }
+    .contact-panel p { margin: 0; color: var(--ink-soft); max-width: 680px; }
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px 22px 42px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 860px) {
+      .nav { height: auto; padding: 16px 22px; gap: 12px; align-items: flex-start; }
+      .nav, .navlinks { flex-direction: column; }
+      .navlinks { gap: 9px; }
+      .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 22px; }
+      .portrait-card { justify-self: start; width: min(260px, 100%); }
+      .section-head { grid-template-columns: 1fr; gap: 8px; }
+      .grid { grid-template-columns: 1fr; }
+      .item { grid-template-columns: 1fr; gap: 4px; }
+      .contact-panel { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { padding-top: 30px; }
+      h1 { font-size: 39px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="#top">Shubham <span>Sharma</span></a><div class="links"><a href="#about">About</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
-  <header id="top" class="hero wrap"><div class="hero-grid"><section class="hero-card"><div class="eyebrow"><span class="pill">PhD Researcher</span><span class="pill">Efficient AI</span><span class="pill">Computer Vision</span></div><h1 class="h1" id="name">Shubham Sharma</h1><p class="lead" id="summary">PhD researcher in Efficient AI and Computer Vision at BITS Pilani, Pilani Campus. Supervised by Prof. Vinay Chamola.</p><div class="cta"><a class="btn primary" href="#publications">View research</a><a class="btn" href="#contact">Get in touch</a><a class="btn" id="githubBtn" href="#" target="_blank" rel="noreferrer">GitHub</a></div><div class="notice" id="dataNotice">Loading portfolio data from JSONBin/public source…</div></section><aside class="side"><div class="side-card"><div class="status"><span class="dot"></span><span id="roleLine">BITS Pilani · Pilani Campus</span></div><div class="stat" id="pubCount">1</div><div class="stat-label">publication(s) listed</div></div><div class="side-card"><div class="stat" id="yearLine">2/4</div><div class="stat-label">PhD progress snapshot</div></div><div class="side-card"><div class="meta">Supervisor</div><strong id="supervisor">Prof. Vinay Chamola</strong><div class="desc">Efficient AI · Computer Vision</div></div></aside></div></header>
-  <main class="wrap">
-    <section class="section" id="about"><div class="section-head"><div><h2 class="section-title">About</h2><p class="section-sub">Research identity and academic focus.</p></div></div><div class="section-card"><p class="desc" id="aboutText">PhD researcher in Efficient AI and Computer Vision at BITS Pilani, Pilani Campus. Supervised by Prof. Vinay Chamola.</p><div class="tagrow" id="focusTags"><span class="tag">Efficient AI</span><span class="tag">Computer Vision</span><span class="tag">Deep Learning</span></div></div></section>
-    <section class="section" id="publications"><div class="section-head"><div><h2 class="section-title">Publications</h2><p class="section-sub">Research papers and scholarly output.</p></div></div><div class="section-card"><div class="timeline" id="pubList"></div></div></section>
-    <section class="section" id="experience"><div class="section-head"><div><h2 class="section-title">Education & Experience</h2><p class="section-sub">Academic background, roles, and research experience.</p></div></div><div class="grid-2"><div class="section-card"><h3 class="section-title" style="font-size:1.05rem">Education</h3><div class="timeline" id="eduList"></div></div><div class="section-card"><h3 class="section-title" style="font-size:1.05rem">Experience</h3><div class="timeline" id="expList"></div></div></div></section>
-    <section class="section" id="projects"><div class="section-head"><div><h2 class="section-title">Projects</h2><p class="section-sub">Selected technical and research projects.</p></div></div><div class="section-card"><div class="grid-2" id="projectList"></div></div></section>
-    <section class="section" id="skills"><div class="section-head"><div><h2 class="section-title">Skills, Awards & Teaching</h2><p class="section-sub">Capabilities and academic service.</p></div></div><div class="grid-3"><div class="section-card"><h3 class="section-title" style="font-size:1.05rem">Skills</h3><div class="skills" id="skillList"></div></div><div class="section-card"><h3 class="section-title" style="font-size:1.05rem">Awards</h3><div class="timeline" id="awardList"></div></div><div class="section-card"><h3 class="section-title" style="font-size:1.05rem">Teaching / Talks</h3><div class="timeline" id="teachList"></div></div></div></section>
-    <section class="section" id="contact"><div class="section-card contact-box"><div><h2 class="section-title">Contact</h2><p class="section-sub" id="contactLine">Pilani, Rajasthan, India</p><div class="tagrow" id="contactLinks"></div></div><a class="btn primary" id="emailBtn" href="#">Email me</a></div></section>
+  <header class="topbar">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top">Shubham Sharma <span>Efficient AI · Computer Vision</span></a>
+      <div class="navlinks">
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap" id="top">
+    <section class="hero" aria-label="Introduction">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> PhD Researcher · BITS Pilani</div>
+        <h1>Efficient AI and computer vision researcher.</h1>
+        <p class="lead">
+          I am a PhD researcher in Electrical and Electronics Engineering at BITS Pilani, Pilani Campus, working on Efficient AI and Computer Vision under the supervision of Prof. Vinay Chamola.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:2001sharma.shubham@gmail.com">Email me</a>
+          <a class="button" href="https://www.linkedin.com/in/2001sharma-shubham/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button" href="#research">View research</a>
+        </div>
+      </div>
+
+      <aside class="portrait-card" aria-label="Profile photo">
+        <div class="portrait">
+          <div class="portrait-fallback">
+            <div>
+              <strong>SS</strong>
+              <span>Add your photo at<br><code>assets/profile.jpg</code></span>
+            </div>
+          </div>
+          <img src="assets/profile.jpg" alt="Portrait of Shubham Sharma" onerror="this.style.display='none'" />
+        </div>
+        <div class="portrait-note">
+          To add your profile picture, create an <strong>assets</strong> folder and upload your image as <strong>profile.jpg</strong>.
+        </div>
+      </aside>
+    </section>
+
+    <section id="research">
+      <div class="section-head">
+        <h2>Research profile</h2>
+        <p class="section-intro">My current work sits at the intersection of efficient deep learning, computer vision, and deployable AI systems.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Research areas</h3>
+          <div class="meta">Efficient AI, Computer Vision, Deep Learning, Hardware-aware ML.</div>
+        </article>
+        <article class="card">
+          <h3>Current affiliation</h3>
+          <div class="meta">Department of Electrical and Electronics Engineering, BITS Pilani, Pilani Campus.</div>
+        </article>
+        <article class="card">
+          <h3>Supervisor</h3>
+          <div class="meta">Prof. Vinay Chamola.</div>
+        </article>
+      </div>
+
+      <div style="height: 18px"></div>
+      <article class="pub">
+        <p class="pub-title">Explainable AI-Empowered Neuromorphic Computing Framework for Consumer Healthcare</p>
+        <div class="meta">S. Sai, S. Sharma, V. Chamola · IEEE Transactions on Consumer Electronics · 2024</div>
+        <div class="tags">
+          <span class="tag">Explainable AI</span>
+          <span class="tag">Neuromorphic Computing</span>
+          <span class="tag">Consumer Healthcare</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="education">
+      <div class="section-head">
+        <h2>Education</h2>
+        <p class="section-intro">Academic training in engineering, chemistry, and ongoing doctoral research.</p>
+      </div>
+      <div class="list">
+        <div class="item">
+          <div class="date">Aug 2024 – Jul 2027</div>
+          <div>
+            <div class="item-title">PhD in Electrical and Electronics Engineering</div>
+            <div class="meta">BITS Pilani, Pilani Campus · GPA: 9.3</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="date">Aug 2019 – Jul 2024</div>
+          <div>
+            <div class="item-title">B.E. Electrical and Electronics Engineering</div>
+            <div class="meta">BITS Pilani, Pilani Campus · GPA: 8.1</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="date">Aug 2019 – Jul 2024</div>
+          <div>
+            <div class="item-title">M.Sc. Chemistry</div>
+            <div class="meta">BITS Pilani, Pilani Campus · GPA: 8.1</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p class="section-intro">Software development and AI training experience spanning web dashboards and RLHF workflows.</p>
+      </div>
+      <div class="list">
+        <div class="item">
+          <div class="date">May 2024 – Jun 2025</div>
+          <div>
+            <div class="item-title">AI RLHF Trainer</div>
+            <div class="meta">Outlier AI · India</div>
+            <p>Worked on reinforcement learning from human feedback and data annotation workflows.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="date">Apr 2021 – Jul 2021</div>
+          <div>
+            <div class="item-title">Software Developer Intern</div>
+            <div class="meta">MSys Technologies Pvt. Ltd. · Bengaluru, Karnataka</div>
+            <p>Led and contributed to a GitHub repository analytics dashboard built from scratch using AngularJS, Tailwind, and Ant Design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="section-intro">Technical toolkit for research prototyping, model development, and applied AI workflows.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Programming</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">C++</span></div>
+        </article>
+        <article class="card">
+          <h3>Deep learning</h3>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Computer Vision</span></div>
+        </article>
+        <article class="card">
+          <h3>AI training</h3>
+          <div class="tags"><span class="tag">RLHF</span><span class="tag">Data annotation</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="section-head">
+        <h2>Teaching & mentoring</h2>
+        <p class="section-intro">Instructional work connecting machine learning, hardware acceleration, and high-level synthesis.</p>
+      </div>
+      <div class="list">
+        <div class="item">
+          <div class="date">Sem 1 & Sem 2, 2025–26</div>
+          <div>
+            <div class="item-title">Instructor · Hardware Software Co-design</div>
+            <div class="meta">BITS Pilani</div>
+            <p>Taught 10 lectures on Machine Learning, Deep Learning, hardware acceleration of deep learning models using the VITIS toolchain, and High-Level Synthesis for ML engineers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <div class="section-head">
+        <h2>Awards & honours</h2>
+        <p class="section-intro">Selected academic recognition.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>GATE 2024</h3>
+          <div class="meta">All India Rank 1712.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-panel">
+        <div>
+          <h2>Contact</h2>
+          <p>For research discussions, collaborations, or academic opportunities, reach me by email or connect on LinkedIn.</p>
+        </div>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="button primary" href="mailto:2001sharma.shubham@gmail.com">2001sharma.shubham@gmail.com</a>
+          <a class="button" href="https://www.linkedin.com/in/2001sharma-shubham/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="wrap footer">© <span id="year"></span> Shubham Sharma. Built as a static GitHub Pages portfolio.</footer>
-<script>
-const JSONBIN_ID = '69de267436566621a8b08c61';
-const PUBLIC_JSONBIN_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_ID}/latest?meta=false`;
-const LOCAL_DATA_URL = './assets/profile.json';
-const fallbackState = {
-  phdPapersRequired: 2,
-  publications: [{ title:'On the Application of Deep Learning in Smart TVs', venue:'IEEE Transactions on Consumer Electronics', year:2024, doi:'https://doi.org/10.1109/TCE.2024.3438160', authors:'Sharma S., et al.', index:'IEEE', countsPHD:'no' }],
-  cv: { basics: { name:'Shubham Sharma', email:'', phone:'', location:'Pilani, Rajasthan, India', website:'', linkedin:'', github:'', summary:'PhD researcher in Efficient AI and Computer Vision at BITS Pilani, Pilani Campus. Supervised by Prof. Vinay Chamola.' }, education:[], experience:[], cvpublications:[], projects:[], skills:[], awards:[], talks:[], teaching:[], collaborations:[], references:[] }
-};
-const $ = id => document.getElementById(id);
-const esc = s => String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-const arr = x => Array.isArray(x) ? x : [];
-function itemHTML(title, meta='', desc='', tags=[], link='') { return `<article class="item"><h3>${link ? `<a href="${esc(link)}" target="_blank" rel="noreferrer">${esc(title)}</a>` : esc(title)}</h3>${meta?`<div class="meta">${esc(meta)}</div>`:''}${desc?`<div class="desc">${esc(desc)}</div>`:''}${tags.length?`<div class="tagrow">${tags.filter(Boolean).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>`:''}</article>`; }
-function empty(text){ return `<div class="empty">${esc(text)}</div>`; }
-async function fetchFirstAvailable(){
-  for (const url of [LOCAL_DATA_URL, PUBLIC_JSONBIN_URL]) {
-    try { const r = await fetch(url, {cache:'no-store'}); if(!r.ok) throw new Error(r.status); const data = await r.json(); return {data: data.record || data, source: url.includes('jsonbin') ? 'JSONBin public endpoint' : 'assets/profile.json'}; } catch(e) {}
-  }
-  return {data:fallbackState, source:'fallback content extracted from dashboard'};
-}
-function normalize(state){
-  const cv = state.cv || fallbackState.cv; const basics = {...fallbackState.cv.basics, ...(cv.basics || {})};
-  const pubs = [...arr(state.publications), ...arr(cv.cvpublications)].filter(p => p && (p.title || p.venue));
-  return { basics, pubs: pubs.length ? pubs : fallbackState.publications, education:arr(cv.education), experience:arr(cv.experience), projects:arr(cv.projects), skills:arr(cv.skills), awards:arr(cv.awards), talks:arr(cv.talks), teaching:arr(cv.teaching), collaborations:arr(cv.collaborations), references:arr(cv.references), raw:state };
-}
-function render(data, source){
-  const {basics,pubs,education,experience,projects,skills,awards,talks,teaching,collaborations} = normalize(data);
-  $('year').textContent = new Date().getFullYear(); $('name').textContent = basics.name || 'Shubham Sharma'; $('summary').textContent = basics.summary || fallbackState.cv.basics.summary; $('aboutText').textContent = basics.summary || fallbackState.cv.basics.summary; $('contactLine').textContent = [basics.location, basics.phone].filter(Boolean).join(' · ') || 'Pilani, Rajasthan, India';
-  $('pubCount').textContent = pubs.length; $('dataNotice').innerHTML = source.includes('JSONBin') ? 'Portfolio data loaded from JSONBin public endpoint.' : source.includes('assets') ? 'Portfolio data loaded from local <span class="mono">assets/profile.json</span>.' : 'Using safe fallback content. To load full JSONBin data on GitHub Pages, make the bin public or export the record to <span class="mono">assets/profile.json</span>.'; document.querySelector('.dot').classList.toggle('ok', !source.includes('fallback'));
-  if (basics.github) { $('githubBtn').href = basics.github; } else { $('githubBtn').classList.add('hidden'); }
-  if (basics.email) { $('emailBtn').href = `mailto:${basics.email}`; } else { $('emailBtn').classList.add('hidden'); }
-  const linkData = [['Email', basics.email && `mailto:${basics.email}`], ['Website', basics.website], ['LinkedIn', basics.linkedin], ['GitHub', basics.github]].filter(x=>x[1]); $('contactLinks').innerHTML = linkData.map(([label,url])=>`<a class="tag" href="${esc(url)}" target="_blank" rel="noreferrer">${esc(label)}</a>`).join('');
-  $('pubList').innerHTML = pubs.sort((a,b)=>(Number(b.year)||0)-(Number(a.year)||0)).map(p=>`<article class="item"><div class="pub-title">${esc(p.title)}</div><div class="meta">${[p.authors,p.venue,p.year].filter(Boolean).map(esc).join(' · ')}</div>${p.doi?`<a class="doi" href="${esc(p.doi)}" target="_blank" rel="noreferrer">${esc(p.doi)}</a>`:''}<div class="tagrow"><span class="tag ${p.countsPHD==='yes'?'green':'amber'}">${esc(p.index || 'Publication')}</span>${p.countsPHD==='yes'?'<span class="tag green">Counts toward PhD</span>':''}</div></article>`).join('') || empty('No publications listed yet.');
-  $('eduList').innerHTML = education.map(e=>itemHTML(e.degree || e.title || 'Education', [e.institution,e.location,[e.start,e.end].filter(Boolean).join('–')].filter(Boolean).join(' · '), [e.gpa,e.desc].filter(Boolean).join('\n'), [])).join('') || itemHTML('PhD in Computer Science', 'BITS Pilani · Pilani Campus', 'Research focus: Efficient AI and Computer Vision. Supervisor: Prof. Vinay Chamola.', ['Ongoing']);
-  $('expList').innerHTML = experience.map(e=>itemHTML(e.role || e.title || 'Experience', [e.org,e.location,[e.start,e.end].filter(Boolean).join('–')].filter(Boolean).join(' · '), e.desc || '', (e.skills||'').split(',').map(s=>s.trim()))).join('') || empty('No experience entries available in the public data source.');
-  $('projectList').innerHTML = projects.map(p=>itemHTML(p.title || 'Project', [p.role,[p.start,p.end].filter(Boolean).join('–')].filter(Boolean).join(' · '), p.desc || '', (p.skills||'').split(',').map(s=>s.trim()), p.link)).join('') || empty('No projects available in the public data source.');
-  const skillTags = skills.flatMap(s => s.items ? String(s.items).split(',') : [s.category, s.name]).map(s=>String(s||'').trim()).filter(Boolean);
-  $('skillList').innerHTML = (skillTags.length ? skillTags : ['Python','PyTorch','Deep Learning','Computer Vision','Efficient AI']).map(s=>`<span class="skill">${esc(s)}</span>`).join('');
-  $('awardList').innerHTML = awards.map(a=>itemHTML(a.title || a.name || 'Award', [a.org,a.year].filter(Boolean).join(' · '), a.desc || '')).join('') || empty('No awards listed yet.');
-  const teachTalks = [...teaching.map(t=>({...t,type:'Teaching'})), ...talks.map(t=>({...t,type:'Talk'}))];
-  $('teachList').innerHTML = teachTalks.map(t=>itemHTML(t.title || t.role || t.type, [t.type,t.org,t.event,t.year].filter(Boolean).join(' · '), t.desc || '')).join('') || empty('No teaching or talk entries listed yet.');
-  if (collaborations.length) $('focusTags').innerHTML += collaborations.slice(0,4).map(c=>`<span class="tag green">${esc(c.org || c.title || 'Collaboration')}</span>`).join('');
-}
-fetchFirstAvailable().then(({data,source})=>render(data,source));
-</script>
+
+  <footer>
+    © <span id="year"></span> Shubham Sharma. Built for GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
