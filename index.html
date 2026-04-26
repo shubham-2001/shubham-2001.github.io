@@ -204,10 +204,18 @@
     }
 
     .portrait img {
+      position: relative;
+      z-index: 2;
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .portrait.photo-loaded img {
+      opacity: 1;
     }
 
     .portrait-fallback {
@@ -218,6 +226,7 @@
       text-align: center;
       padding: 28px;
       color: var(--accent-dark);
+      z-index: 1;
     }
 
     .portrait-fallback strong {
@@ -241,6 +250,10 @@
       color: var(--muted);
       font-size: 11px;
       line-height: 1.5;
+    }
+
+    .portrait-card.has-photo .portrait-note {
+      display: none;
     }
 
     section {
@@ -420,18 +433,18 @@
         </div>
       </div>
 
-      <aside class="portrait-card" aria-label="Profile photo">
-        <div class="portrait">
+      <aside class="portrait-card" id="portrait-card" aria-label="Profile photo">
+        <div class="portrait" id="portrait">
           <div class="portrait-fallback">
             <div>
               <strong>SS</strong>
               <span>Add your photo at<br><code>assets/profile.jpg</code></span>
             </div>
           </div>
-          <img src="assets/profile.jpg" alt="Portrait of Shubham Sharma" onerror="this.style.display='none'" />
+          <img src="assets/profile.jpg" alt="Portrait of Shubham Sharma" onload="document.getElementById('portrait').classList.add('photo-loaded');document.getElementById('portrait-card').classList.add('has-photo');" onerror="this.style.display='none'" />
         </div>
         <div class="portrait-note">
-          To add your profile picture, create an <strong>assets</strong> folder and upload your image as <strong>profile.jpg</strong>.
+          Add your profile picture at <strong>assets/profile.jpg</strong>. This note disappears after the image loads.
         </div>
       </aside>
     </section>
